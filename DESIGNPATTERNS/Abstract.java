@@ -1,4 +1,8 @@
 package DESIGNPATTERNS;
+// ---- Abstract Factory Design Pattern
+// Abstract factory design pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes. 
+// It allows you to create objects that belong to a particular family (or theme) without coupling your code to the specific implementations of those objects.
+//  This pattern is particularly useful when you want to ensure that related objects are used together and when you want to provide a way to create objects that can vary based on some configuration or context.
 interface PaymentGateway{
     void processPayment(double amount);
 }
