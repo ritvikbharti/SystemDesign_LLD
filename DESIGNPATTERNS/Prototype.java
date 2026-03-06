@@ -1,5 +1,8 @@
 import java.util.*;
-
+// Prototype pattern implementation for creating email templates
+// Prototype pattern allows us to create new objects by copying existing ones, which can be more efficient than creating new instances from scratch.
+// Here, we have an EmailTemplate interface that defines the structure for email templates, and a WelcomeEmail class that implements this interface. 
+// The EmailTemplateRegistry class serves as a registry for different email templates, allowing us to retrieve and clone them as needed. In the main method, we demonstrate how to use the prototype pattern to create and modify email templates without affecting the original template.
 interface EmailTempelate extends Cloneable{
     EmailTempelate clone();
     void setContent(String content);
