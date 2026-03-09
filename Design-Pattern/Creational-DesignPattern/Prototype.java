@@ -20,7 +20,7 @@ class WelcomeEmail implements EmailTempelate{
         this.subject = "Welcome to TUf++";
         this.content = "Hi Guys! How are you all.";
     }
-    @Override
+@Override
     public WelcomeEmail clone(){
         try{
             return (WelcomeEmail) super.clone();
