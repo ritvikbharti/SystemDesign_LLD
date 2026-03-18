@@ -43,7 +43,7 @@ public class Adapter{
         CheckoutService checkoutService = new CheckoutService(new RazorpayAdapter());
         checkoutService.checkout("7777",100000);
         CheckoutService checkoutService2 = new CheckoutService(new PayUGateway());
-        checkoutService2.checkout("1111",9999999);
+        checkoutService2.checkout("1111",9999999); 
     }
 
 }

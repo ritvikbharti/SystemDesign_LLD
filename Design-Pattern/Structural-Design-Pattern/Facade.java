@@ -1,5 +1,8 @@
 // Movie Booking System using Facade Pattern
-
+// facade pattern provides a simplified interface to a complex system of classes, libraries, or frameworks. 
+// It hides the complexities of the system and provides an easy-to-use interface for the client.
+// Here we have a movie booking system where the client interacts with a facade class to book a movie ticket, 
+// which internally interacts with various subsystems like Movie, Theater, Seat, and Payment.
 // Subsystem 1
 class Movie {
     private String title;
