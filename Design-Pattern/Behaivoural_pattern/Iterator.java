@@ -12,17 +12,7 @@ class Video{
 
 }
 
-// class  YouTubePlaylist{
-//     private List<Video> videos = new ArrayList<>();
 
-//     public void addVideo(Video video){
-//         videos.add(video);
-//     }
-//     public List<Video> getVideos(){
-//         return videos;
-//     }
-
-// }
 
 interface PlaylistIterator{
     boolean hasNext();
@@ -50,6 +40,7 @@ class YouTubePlaylistIterator implements PlaylistIterator{
 
 interface Playlist{
     PlaylistIterator createIterator();
+    // PlaylistIterator createCopyrightIterator();
 }
 
 class YouTubePlaylist implements Playlist{
@@ -62,6 +53,11 @@ class YouTubePlaylist implements Playlist{
     public PlaylistIterator createIterator(){
         return new YouTubePlaylistIterator(videos);
     }
+
+    // @Override
+    // public PlaylistIterator createCopyrightIterator(){
+    //     // return new YouTubePlaylistCRightIterator(videos);
+    // }
 }
 
 public class Iterator{
@@ -71,6 +67,8 @@ public class Iterator{
         playlist.addVideo(new Video("System Design Basics"));
         YouTubePlaylist playlist2 = new YouTubePlaylist();
         playlist2.addVideo(new Video("JAVA_SPRINGBOOT_TELLUSKO"));
+        playlist2.addVideo(new Video("Spring Ai"));
+        playlist2.addVideo(new Video("docker"));
 
 
 
