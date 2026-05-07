@@ -1,5 +1,7 @@
 // package RaceCondition;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 class PurchaseCounter{
     private int count;
     public void increment(){
@@ -15,6 +17,22 @@ class PurchaseCounter{
 }
 
 
+class PurchaseAtomicCounter{
+    private AtomicInteger likes = new AtomicInteger(0);
+
+    public void incrementLikes(){
+        int prev,next;
+        do{
+            prev = likes.get(); // user1 -> prev = 10,user2-> prev = 10;
+            next = prev + 1; // u1->next =11,user2 -> next = 11;
+
+        }while(!likes.compareAndSet(prev,next));// u1 and u2
+    }
+    public int getCount(){
+        return likes.get();
+    }
+
+}
 
 
 
